@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
             actions: [
               IconButton(
                   onPressed: () {},
-                  icon: (Icon(
+                  icon: (const Icon(
                     Icons.close,
-                    color: Colors.red,
+                    color: Colors.green,
                   )))
             ],
           ),
@@ -29,6 +29,15 @@ class MyApp extends StatelessWidget {
               Flexible(
                 child: Container(
                   color: Colors.blue,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text('Set your profile!'),
+                      Text('Welcome to Lions Market!'),
+                      Image.asset('x.png'),
+                      Text('data'),
+                    ],
+                  ),
                 ),
                 flex: 5,
               ),
