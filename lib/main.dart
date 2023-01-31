@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
                   onPressed: () {},
                   icon: (Icon(
                     Icons.close,
-                    color: Colors.black,
+                    color: Colors.red,
                   )))
             ],
           ),
