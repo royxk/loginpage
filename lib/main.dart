@@ -20,38 +20,69 @@ class MyApp extends StatelessWidget {
                   onPressed: () {},
                   icon: (const Icon(
                     Icons.close,
-                    color: Colors.green,
+                    color: Colors.black,
                   )))
             ],
           ),
           body: Column(
             children: [
-              Flexible(
+              Expanded(
                 child: Container(
-                  color: Colors.blue,
+                  color: Colors.black,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text('Set your profile!'),
-                      Text('Welcome to Lions Market!'),
-                      Image.asset('x.png'),
-                      Text('data'),
+                      Expanded(
+                          child: Container(
+                        margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                        color: Colors.blueAccent,
+                        child: Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 40,),
+                                child: Text(
+                                    'Set your profile!',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    fontSize: 40,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 40),
+                                  child: Text(
+                                      'Welcome to Lions Market',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                    ),
+                                  )
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 40),
+                                  child: Image.asset('x.png')),
+                              Container(
+                                margin: EdgeInsets.only(top: 40),
+                                  child: Text('Your photo will be visible on your profile. You can change this in privacy settings in the future.')),
+                            ],
+                          ),
+                        ),
+                      )),
+                      Container(
+                        child: Container(
+                          margin: EdgeInsets.all(10),
+                          height: 200,
+                          color: Colors.red,
+                        ),
+                      ),
                     ],
                   ),
                 ),
-                flex: 5,
               ),
-              Flexible(
-                child: Container(
-                  color: Colors.red,
-                ),
-                flex: 2,
-              ),
-              Flexible(
-                child: Container(
-                  color: Colors.green,
-                ),
-                flex: 1,
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.blueAccent,
               )
             ],
           )),
