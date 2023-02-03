@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
                   onPressed: () {},
                   icon: (const Icon(
                     Icons.close,
-                    color: Colors.black,
                   )))
             ],
           ),
@@ -28,13 +27,11 @@ class MyApp extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  color: Colors.black,
                   child: Column(
                     children: [
                       Expanded(
                           child: Container(
                         margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-                        color: Colors.blueAccent,
                         child: Flexible(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +75,39 @@ class MyApp extends StatelessWidget {
                         child: Container(
                           margin: EdgeInsets.all(10),
                           height: 200,
-                          color: Colors.red,
+                          child: Column(
+                            children: [
+                              Container(
+                                alignment: Alignment.centerLeft,
+                                margin: EdgeInsets.only(top: 20),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 8.0, left: 8.0, right: 8.0),
+                                    child: Text(
+                                      'Username *',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  )
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(),
+                                    hintText: "ex) Leonardo031",
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                    child: Text('Username must contain only letters and numbers between 6 to 12.')),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -87,8 +116,21 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                 height: 100,
-                width: 100,
-                color: Colors.blueAccent,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: (){},
+                    child: Ink(
+                      child: Center(
+                        child: Text("Next"),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(Radius.circular(5)),
+                      ),
+                    ),
+                  ),
+                ),
               )
             ],
           )),
