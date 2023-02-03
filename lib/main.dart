@@ -60,10 +60,16 @@ class MyApp extends StatelessWidget {
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 40),
-                                  child: Image.asset('x.png')),
+                                  child: Image.asset('lionsmarketlogo.png',
+                                      height: 200,
+                                    width: 200,
+                                  )
+                              ),
                               Container(
-                                margin: EdgeInsets.only(top: 40),
-                                  child: Text('Your photo will be visible on your profile. You can change this in privacy settings in the future.')),
+                                margin: EdgeInsets.only(bottom: 40),
+                                  child: Text('Your photo will be visible on your profile. You can change this in privacy settings in the future.',
+                                  textAlign: TextAlign.center,)
+                              ),
                             ],
                           ),
                         ),
